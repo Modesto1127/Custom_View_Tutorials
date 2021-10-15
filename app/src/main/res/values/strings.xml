@@ -2,5 +2,23 @@
     <string name="app_name">Custom_View_Tutorials</string>
 
     <string name="paint">PaintActivity</string>
+    <string name="path">PathActivity</string>
+    <string name="title_line_view">PathLineView</string>
+    <string name="title_arc_style">PathArcStyleView</string>
+    <string name="title_arc_start">PaintArcStartView</string>
+    <string name="title_arc_angle">PathArcAngleView</string>
+    <string name="title_paint_color">PaintColorView</string>
+    <string name="title_paint_style">PaintStyleView</string>
+    <string name="title_paint_ant_alias">PaintAntiAliasView</string>
+    <string name="title_canvas_color">CanvasColorView</string>
+    <string name="title_canvas_line">CanvasLineView</string>
+    <string name="title_canvas_dot">CanvasDotView</string>
+    <string name="title_canvas_rect">CanvasRectView</string>
+    <string name="title_canvas_round_rect">CanvasRoundRectView</string>
+    <string name="title_add_path">PathAddPathView</string>
+    <string name="title_direction">PathDirectionView</string>
+    <string name="title_fill_mode">PathFillModeView</string>
+    <string name="title_reset_path">PathResetPathView</string>
+    <string name="title_radar_view">PathRadarView</string>
 
 </resources>

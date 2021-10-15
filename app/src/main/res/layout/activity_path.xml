@@ -10,67 +10,76 @@
 
         <TextView
             style="@style/ListTitle"
-            android:text="@string/title_paint_color" />
+            android:text="@string/title_line_view" />
 
-        <me.modesto.learnview.ch1.widget.PaintColorView
+        <me.modesto.learnview.ch2.widget.PathLineView
             android:layout_width="match_parent"
             android:layout_height="100dp" />
 
         <TextView
             style="@style/ListTitle"
-            android:text="@string/title_paint_style" />
+            android:text="@string/title_arc_style" />
 
-        <me.modesto.learnview.ch1.widget.PaintStyleView
+        <me.modesto.learnview.ch2.widget.PathArcStyleView
+            android:layout_width="match_parent"
+            android:layout_height="150dp" />
+
+        <TextView
+            style="@style/ListTitle"
+            android:text="@string/title_arc_start" />
+
+        <me.modesto.learnview.ch2.widget.PathArcStartView
             android:layout_width="match_parent"
             android:layout_height="100dp" />
 
         <TextView
             style="@style/ListTitle"
-            android:text="@string/title_paint_ant_alias" />
+            android:text="@string/title_arc_angle" />
 
-        <me.modesto.learnview.ch1.widget.PaintAntiAliasView
+        <me.modesto.learnview.ch2.widget.PathArcAngleView
+            android:layout_width="match_parent"
+            android:layout_height="150dp" />
+
+        <TextView
+            style="@style/ListTitle"
+            android:text="@string/title_add_path" />
+
+        <me.modesto.learnview.ch2.widget.PathAddPathView
             android:layout_width="match_parent"
             android:layout_height="100dp" />
 
         <TextView
             style="@style/ListTitle"
-            android:text="@string/title_canvas_color" />
+            android:text="@string/title_direction" />
 
-        <me.modesto.learnview.ch1.widget.CanvasColorView
+        <me.modesto.learnview.ch2.widget.PathDirectionView
             android:layout_width="match_parent"
-            android:layout_height="100dp" />
+            android:layout_height="120dp" />
 
         <TextView
             style="@style/ListTitle"
-            android:text="@string/title_canvas_line" />
+            android:text="@string/title_fill_mode" />
 
-        <me.modesto.learnview.ch1.widget.CanvasLineView
+        <me.modesto.learnview.ch2.widget.PathFillModeView
             android:layout_width="match_parent"
-            android:layout_height="100dp" />
+            android:layout_height="250dp" />
 
         <TextView
             style="@style/ListTitle"
-            android:text="@string/title_canvas_dot" />
+            android:text="@string/title_reset_path" />
 
-        <me.modesto.learnview.ch1.widget.CanvasDotView
+        <me.modesto.learnview.ch2.widget.PathResetPathView
             android:layout_width="match_parent"
-            android:layout_height="100dp" />
+            android:layout_height="200dp" />
 
         <TextView
             style="@style/ListTitle"
-            android:text="@string/title_canvas_rect" />
+            android:text="@string/title_radar_view" />
 
-        <me.modesto.learnview.ch1.widget.CanvasRectView
-            android:layout_width="match_parent"
-            android:layout_height="100dp" />
-
-        <TextView
-            style="@style/ListTitle"
-            android:text="@string/title_canvas_round_rect" />
-
-        <me.modesto.learnview.ch1.widget.CanvasRoundRectView
+        <me.modesto.learnview.ch2.widget.PathRadarView
             android:layout_width="match_parent"
             android:layout_height="200dp" />
 
     </LinearLayout>
+
 </ScrollView>

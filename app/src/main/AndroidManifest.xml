@@ -19,6 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ch1.PaintActivity" />
+        <activity android:name=".ch2.PathActivity" />
     </application>
 
 </manifest>

@@ -15,3 +15,12 @@ fun dp2px(context: Context, dp: Float): Float {
     val scaledDensity = context.resources.displayMetrics.density
     return dp * scaledDensity + 0.5F
 }
+
+fun sp2px(view: View, sp: Float): Float {
+    return sp2px(view.context, sp)
+}
+
+fun sp2px(context: Context, sp: Float): Float {
+    val scaledDensity = context.resources.displayMetrics.scaledDensity
+    return sp * scaledDensity + 0.5F
+}
