@@ -153,14 +153,90 @@ canvas.drawPath(linePath, paint)
 网状路径的大小站当前控件的 90%，所以半径为：`min(width, height) / 2 * 0.9`
 
 ```kotlin
-private var radiud: Float = 0F
+private var radius: Float = 0F
 private var centerX: Float = 0F
 private var centerY: Float = 0F
 
 override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
     radius = minOf(w, h) / 2 * 0.9F
     centerX = w / 2F
-    centerY = w / 2F
+    centerY = h / 2F
     postInvalidate()
+}
+```
+
+### 绘制多边形
+
+绘制多边形我们需要使用三角函数来计算每个角的位置
+
+每个角的横坐标的位置是圆心横坐标加上半径乘以角度的余弦
+
+每个角的纵坐标的位置是圆心纵坐标加上半径乘以角度的正弦
+
+```kotlin
+private fun drawPolygon(canvas: Canvas) {
+    val path = Path()
+    // 每圈网格之间的间距
+    val gap = radius / (maxLevel + 1)
+    (1..maxLevel + 1).forEach { tier ->
+        val curR = gap * tier
+        path.reset()
+        (0 until count).forEach { index ->
+            if (0 == index) {
+                path.moveTo(centerX + curR, centerY)
+            } else {
+                val x = centerX + curR * cos(angle * index)
+                val y = centerY + curR * sin(angle * index)
+                path.lineTo(x, y)
+            }
+        }
+        path.close()
+        canvas.drawPath(path, radarPaint)
+    }
+}
+```
+
+### 绘制网格线
+
+类似于绘制多边形
+
+```kotlin
+private fun drawData(data: IntArray, canvas: Canvas) {
+    val path = Path()
+
+    val gap = radius / (maxLevel + 1)
+
+    (0 until count).forEach { index ->
+        val len = gap * data[index]
+        val x = centerX + len * cos(angle * index)
+        val y = centerY + len * sin(angle * index)
+        if (0 == index) {
+            path.moveTo(x, centerY)
+        } else {
+            path.lineTo(x, y)
+        }
+        valuePaint.alpha = 255
+        canvas.drawCircle(x, y, 10F, valuePaint)
+    }
+
+    valuePaint.alpha = 172
+    valuePaint.style = Paint.Style.FILL_AND_STROKE
+    canvas.drawPath(path, valuePaint)
+}
+```
+
+### 绘制数据
+
+```kotlin
+private fun drawLines(canvas: Canvas) {
+    val path = Path()
+    (0..count).forEach { index ->
+        path.reset()
+        path.moveTo(centerX, centerY)
+        val x = centerX + radius * cos(angle * index)
+        val y = centerY + radius * sin(angle * index)
+        path.lineTo(x, y)
+        canvas.drawPath(path, radarPaint)
+    }
 }
 ```

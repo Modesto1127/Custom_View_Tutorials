@@ -3,6 +3,7 @@
 
     <string name="paint">PaintActivity</string>
     <string name="path">PathActivity</string>
+    <string name="text">TextActivity</string>
     <string name="title_line_view">PathLineView</string>
     <string name="title_arc_style">PathArcStyleView</string>
     <string name="title_arc_start">PaintArcStartView</string>
