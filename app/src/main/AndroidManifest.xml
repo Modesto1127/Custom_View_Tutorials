@@ -20,6 +20,7 @@
         </activity>
         <activity android:name=".ch1.PaintActivity" />
         <activity android:name=".ch2.PathActivity" />
+        <activity android:name=".ch3.TextActivity" />
     </application>
 
 </manifest>

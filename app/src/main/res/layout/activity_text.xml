@@ -5,6 +5,73 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></LinearLayout>
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/ListTitle"
+            android:text="@string/title_text_width" />
+
+        <me.modesto.learnview.ch3.widget.TextWidthView
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+
+        <TextView
+            style="@style/ListTitle"
+            android:text="@string/title_text_style" />
+
+        <me.modesto.learnview.ch3.widget.TextStyleView
+            android:layout_width="match_parent"
+            android:layout_height="180dp" />
+
+        <TextView
+            style="@style/ListTitle"
+            android:text="@string/title_text_align" />
+
+        <me.modesto.learnview.ch3.widget.TextAlignView
+            android:layout_width="match_parent"
+            android:layout_height="180dp" />
+
+        <TextView
+            style="@style/ListTitle"
+            android:text="@string/title_text_skew" />
+
+        <me.modesto.learnview.ch3.widget.TextSkewView
+            android:layout_width="match_parent"
+            android:layout_height="180dp" />
+
+        <TextView
+            style="@style/ListTitle"
+            android:text="@string/title_text_scale" />
+
+        <me.modesto.learnview.ch3.widget.TextScaleView
+            android:layout_width="match_parent"
+            android:layout_height="120dp" />
+
+        <TextView
+            style="@style/ListTitle"
+            android:text="@string/title_text_bold" />
+
+        <me.modesto.learnview.ch3.widget.TextBoldView
+            android:layout_width="match_parent"
+            android:layout_height="230dp" />
+
+        <TextView
+            style="@style/ListTitle"
+            android:text="@string/title_text_position" />
+
+        <me.modesto.learnview.ch3.widget.TextPosView
+            android:layout_width="match_parent"
+            android:layout_height="230dp" />
+
+        <TextView
+            style="@style/ListTitle"
+            android:text="@string/title_text_path" />
+
+        <me.modesto.learnview.ch3.widget.TextPathView
+            android:layout_width="match_parent"
+            android:layout_height="1000dp" />
+
+    </LinearLayout>
 
 </ScrollView>
